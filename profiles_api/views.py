@@ -123,7 +123,7 @@ class UserProfileViewSet(viewsets.ModelViewSet):
     authentication_classes = (TokenAuthentication,)
     permission_classes = (permissions.UpdateOwnProfile,)
     filter_backends = (filters.SearchFilter,)
-    search_fields = ('name', 'email',)
+    search_fields = ('name', 'email',) #going to have to delete 'email'
 
 class UserLoginApiView(ObtainAuthToken):
    """Handle creating user authentication tokens"""
